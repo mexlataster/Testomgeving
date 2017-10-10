@@ -21,27 +21,36 @@
 <! layer div, voor de fayed out>
 <div class="layer">
 
+
+
     <! menu div >
       <div class="menu">
                   <a href="../"><img src="/images/head.png" class="head"></a>
-              <div class="links">
-                  <a href="{{ url('/normalgallery') }}">Normale Gallerij</a>
-                  <a href="{{ url('/image-gallery') }}">Admin Gallerij</a>
-                  <! Kijk of de user is ingelogd.>
-                  @if (!Auth::check())
-                  <a href="{{ url('/login') }}">Login</a>
-                  <a href="{{ url('/register') }}">Registreren</a>
-                  @else
-                  <a href="{{ url('/logout') }}">Uitloggen</a>
-                  @endif
-                  <a href="{{ url('/getInsert') }}">Contact</a>
-                  <! Check of er een user is ingelogd, en daarna checken of de user admin is>
-                  @if (isset(Auth::user()->user_type))
-                  @if (Auth::user()->user_type == 'normal')
-                  <a href="{{ url('/') }}">Admin</a>
-                  @endif
-                  @endif
-            </div>
+                  <nav id="nav" role="navigation">
+                    <a href="#nav" title="Show navigation">Menu</a>
+                <a href="#" title="Hide navigation">Menu</a>
+                    <ul style="padding:unset !important;">
+                            <ul style="list-style: none !important; padding:unset !important;">
+                              <li><a href="{{ url('/normalgallery') }}">Normale Gallerij</a></li>
+                              <li><a href="{{ url('/image-gallery') }}">Admin Gallerij</a></li>
+                              <! Kijk of de user is ingelogd.>
+                              @if (!Auth::check())
+                              <li><a href="{{ url('/login') }}">Login</a></li>
+                              <li><a href="{{ url('/register') }}">Registreren</a></li>
+                              @else
+                              <li><a href="{{ url('/logout') }}">Uitloggen</a></li>
+                              @endif
+                              <li><a href="{{ url('/getInsert') }}">Contact</a></li>
+                              <! Check of er een user is ingelogd, en daarna checken of de user admin is>
+                              @if (isset(Auth::user()->user_type))
+                              @if (Auth::user()->user_type == 'normal')
+                              <li><a href="{{ url('/') }}">Admin</a></li>
+                              @endif
+                              @endif
+                            </ul>
+                        </li>
+                    </ul>
+                  </nav>
 
               </div>
 
@@ -50,7 +59,7 @@
                 <div class="navbar-header">
 
                     <!-- Collapsed Hamburger -->
-                    <!-- 
+                    <!--
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
                         <span class="sr-only">Toggle Navigation</span>
                         <span class="icon-bar"></span>
@@ -76,7 +85,7 @@
 
     <! page content >
     @yield('content')
- 
+
 
     <! footer >
      <div class="footer">
