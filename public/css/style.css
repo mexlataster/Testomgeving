@@ -17,7 +17,6 @@
 	}
 
 	.links{
-		display: grid !important;
 		margin-left:unset !important;
 		position:unset !important;
 		margin-top: unset !important;
@@ -40,12 +39,13 @@
 	}
 
 	.footer-right{
-		display: table-footer-group !important;
+		display: inline-grid !important;
 		text-align: unset !important;
+		margin-left: 25px !important;
 	}
 
 	.footer{
-		height: 100% !important;
+		height: 80% !important;
 	}
 
 
