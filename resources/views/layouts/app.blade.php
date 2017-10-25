@@ -40,7 +40,7 @@
                               @else
                               <li><a href="{{ url('/logout') }}">Uitloggen</a></li>
                               @endif
-                              <li><a href="{{ url('/getInsert') }}">Contact</a></li>
+                              <li><a href="{{ url('/contact') }}">Contact</a></li>
                               <! Check of er een user is ingelogd, en daarna checken of de user admin is>
                               @if (isset(Auth::user()->user_type))
                               @if (Auth::user()->user_type == 'normal')

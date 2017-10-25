@@ -10,7 +10,7 @@ class ContactController extends Controller
     public function getInsert()
     {
 
-      return view('user.getInsert',compact('roles'));
+      return view('contact',compact('roles'));
     }
 
     public function postInsert(Request $r){

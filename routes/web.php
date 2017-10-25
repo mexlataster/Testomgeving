@@ -30,7 +30,9 @@ Route::get('/messagecenter', function() {
     return view('/messagecenter');
 });
 
-// De view van de Gebruiker
+Route::get('/contact', function() {
+  return view('/contact');
+});
 
 
 
