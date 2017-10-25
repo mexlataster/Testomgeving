@@ -61,8 +61,8 @@ Route::resource('mail', 'MailController');
 
 Route::resource('adminmail', 'AdminMailController');
 
-// Route::get('/getInsert', 'CrudController@getInsert');
-// Route::post('/postInsert', 'CrudController@postInsert');
+Route::get('/getInsert', 'ContactController@getInsert');
+Route::post('/postInsert', 'ContactController@postInsert');
 Route::get('/image-gallery', 'ImageGalleryController@index');
 Route::post('/image-gallery', 'ImageGalleryController@upload');
 Route::delete('/image-gallery/{id}', 'ImageGalleryController@destroy');
