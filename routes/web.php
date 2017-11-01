@@ -30,6 +30,8 @@ Route::get('/messagecenter', function() {
     return view('/messagecenter');
 });
 
+Route::get('/userChange', 'userChangeController@index');
+
 // De view van de Gebruiker
 
 
