@@ -33,6 +33,10 @@ Route::get('/messagecenter', function() {
 Route::get('/contact', function() {
   return view('/contact');
 });
+
+Route::Get('/videogallery', function() {
+  return view('/videogallery');
+});
 Route::get('/userChange', 'userChangeController@index');
 
 // De view van de Gebruiker
