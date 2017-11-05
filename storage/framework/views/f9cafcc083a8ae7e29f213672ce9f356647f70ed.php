@@ -30,7 +30,7 @@
                     <a href="#nav" title="Show navigation">Menu</a>
                 <a href="#" title="Hide navigation">Menu</a>
                     <ul style="padding:unset !important;">
-                            <ul style="list-style: none !important; padding:unset !important;">
+                            <ul class="links" style="list-style: none !important;">
                               <li><a href="<?php echo e(url('/normalgallery')); ?>">Normale Gallerij</a></li>
                               <li><a href="<?php echo e(url('/image-gallery')); ?>">Admin Gallerij</a></li>
                               <! Kijk of de user is ingelogd.>
@@ -40,7 +40,7 @@
                               <?php else: ?>
                               <li><a href="<?php echo e(url('/logout')); ?>">Uitloggen</a></li>
                               <?php endif; ?>
-                              <li><a href="<?php echo e(url('/getInsert')); ?>">Contact</a></li>
+                              <li><a href="<?php echo e(url('/contact')); ?>">Contact</a></li>
                               <! Check of er een user is ingelogd, en daarna checken of de user admin is>
                               <?php if(isset(Auth::user()->user_type)): ?>
                               <?php if(Auth::user()->user_type == 'normal'): ?>
@@ -91,7 +91,7 @@
     <! footer >
      <div class="footer">
               <div class="footer-left">
-                  <h2>Contact</h2>
+                  <h1>Contact</h1>
                   <h3 class="red">Lestijden:</h3>
                   <p>Iedere woensdag van 19:00 tot 20:30</p>
 

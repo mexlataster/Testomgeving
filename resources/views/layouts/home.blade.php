@@ -29,6 +29,6 @@
                   <a href="{{ url('/image-gallery') }}">Admin Gallerij</a>
                   <a href="{{ url('/login') }}">Login</a>
                   <a href="{{ url('/register') }}">Register</a>
-                  <a href="{{ url('/getInsert') }}">Contact</a>
+                  <a href="{{ url('/contact') }}">Contact</a>
               </div>
             </div>
