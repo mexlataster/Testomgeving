@@ -18,9 +18,9 @@
       <form class="center-form" role="form" method="POST" action="{{ route('login') }}">
         {{ csrf_field() }}
 
-          <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+          <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}" style="text-align: center;">
               <h4>E-Mailadres:</h4>
-          <input id="email" type="email" name="email" value="{{ old('email') }}" required autofocus>
+          <input id="email" type="email" name="email" style="text-align: center;" value="{{ old('email') }}" required autofocus>
               @if ($errors->has('email'))
                   <span class="help-block">
                       <strong>{{ $errors->first('email') }}</strong>
@@ -28,9 +28,9 @@
               @endif
           </div>
 
-          <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+          <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}" style="text-align: center;">
               <h4>Wachtwoord:</h4>
-          <input id="password" type="password" name="password" required>
+          <input id="password" type="password" style="text-align: center;" name="password" required>
               @if ($errors->has('password'))
                   <span>
                       <strong>{{ $errors->first('password') }}</strong>

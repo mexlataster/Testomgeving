@@ -19,9 +19,9 @@
         <?php echo e(csrf_field()); ?>
 
 
-          <div class="form-group<?php echo e($errors->has('email') ? ' has-error' : ''); ?>">
+          <div class="form-group<?php echo e($errors->has('email') ? ' has-error' : ''); ?>" style="text-align: center;">
               <h4>E-Mailadres:</h4>
-          <input id="email" type="email" name="email" value="<?php echo e(old('email')); ?>" required autofocus>
+          <input id="email" type="email" name="email" style="text-align: center;" value="<?php echo e(old('email')); ?>" required autofocus>
               <?php if($errors->has('email')): ?>
                   <span class="help-block">
                       <strong><?php echo e($errors->first('email')); ?></strong>
@@ -29,9 +29,9 @@
               <?php endif; ?>
           </div>
 
-          <div class="form-group<?php echo e($errors->has('password') ? ' has-error' : ''); ?>">
+          <div class="form-group<?php echo e($errors->has('password') ? ' has-error' : ''); ?>" style="text-align: center;">
               <h4>Wachtwoord:</h4>
-          <input id="password" type="password" name="password" required>
+          <input id="password" type="password" style="text-align: center;" name="password" required>
               <?php if($errors->has('password')): ?>
                   <span>
                       <strong><?php echo e($errors->first('password')); ?></strong>
@@ -72,7 +72,7 @@
       <form class="center-form" style="text-align:center;" role="form" method="POST" action="<?php echo e(route('register')); ?>">
         <?php echo e(csrf_field()); ?>
 
-          <div class="form-group<?php echo e($errors->has('name') ? ' has-error' : ''); ?>">
+          <div class="form-group<?php echo e($errors->has('name') ? ' has-error' : ''); ?>" style="text-align: center;">
               <h4>Naam:</h4>
                   <div class="col-md-3">
                       <input id="name" type="text" class="form-control" name="name" value"<?php echo e(old('name')); ?>" required>

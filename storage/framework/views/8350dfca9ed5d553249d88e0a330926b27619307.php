@@ -60,7 +60,6 @@
                   <li><a href="<?php echo e(url('/image-gallery')); ?>" style="color:red;">Admin Gallerij</a></li>
                   <li><a href="#loginmodal" data-toggle="modal" data-target="#loginmodal" style="color:red;">Login</a></li>
                   <li><a href="#loginmodal" data-toggle="modal" data-target="#registermodal" style="color:red;">Register</a></li>
-                  <li><a href="<?php echo e(url('/register')); ?>" style="color:red;">Registreren</a></li>
                   <li><a href="<?php echo e(url('/getInsert')); ?>" style="color:red;">Contact</a></li>
                 </ul>
               </nav>
