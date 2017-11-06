@@ -3,13 +3,24 @@
 
 <div class="main">
 	<div class="container">
-		<form>
-			<select>
+@if(!$url)
 				@foreach ($users as $user)
-					<option><a href="google.com"> {{$user->name}}</a></option>
+					<a href="{{ url('userChange',$user->id) }}">{{$user->name}}</a> <br>
 				@endforeach
-			</select>
-		</form>
+@endif
+
+@if($url)
+<form action="{{ route('user.update', $user->id) }}" method="POST">
+	Naam:<br>
+	<input type="text" name="name" value="{{$user->name}}">
+	 {{ csrf_field() }}
+  	{{ method_field('PUT') }}﻿
+  	<input type="hidden" name="_method" value="PUT">
+	<input type="submit" value="Bewerk">
+</form>
+@endif
+
+
 	</div>
 </div>
 

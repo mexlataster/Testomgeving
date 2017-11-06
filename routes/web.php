@@ -19,7 +19,7 @@ Route::get('/normalgallery', function () {
     return view('normalgallery');
 });
 
-//profile route
+//User profile view
 Route::get('/user', 'ProfileController@index');
 
 Route::get('/adminwelcome', function() {
@@ -33,12 +33,15 @@ Route::get('/messagecenter', function() {
 Route::get('/contact', function() {
   return view('/contact');
 });
+
+//User update view
 Route::get('/userChange', 'userChangeController@index');
 
-// De view van de Gebruiker
+//Same page with added ID
+Route::get('/userChange/{id}', 'userChangeController@edit');
 
-
-
+//Update user
+Route::any('/userChange/edit/{id}', 'userChangeController@update')->name('user.update');
 
 Route::get('/inschrijven', function () {
   return view('/inschrijven');
@@ -85,7 +88,5 @@ Route::resource('message' , 'MessageController');
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-
-Route::get('protected', ['middleware' => ['auth', 'admin'], function() { return "this page requires that you be logged in and an Admin"; }]);
 
 Auth::routes();
