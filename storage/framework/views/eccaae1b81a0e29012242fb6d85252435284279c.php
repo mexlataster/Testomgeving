@@ -72,7 +72,7 @@
       <form class="center-form" style="text-align:center;" role="form" method="POST" action="<?php echo e(route('register')); ?>">
         <?php echo e(csrf_field()); ?>
 
-          <div class="form-group<?php echo e($errors->has('name') ? ' has-error' : ''); ?>" style="text-align: center;">
+          <div class="form-group<?php echo e($errors->has('name') ? ' has-error' : ''); ?>">
               <h4>Naam:</h4>
                   <div class="col-md-3">
                       <input id="name" type="text" class="form-control" name="name" value"<?php echo e(old('name')); ?>" required>
