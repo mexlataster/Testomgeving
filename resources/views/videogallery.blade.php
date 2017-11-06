@@ -47,7 +47,7 @@
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
   </head>
   <body>
-
+@extends('layouts.loginmodal')
     <header role="banner" class="navbar navbar-fixed-top navbar-inverse">
           <div class="layer">
             <div class="menu">
@@ -58,8 +58,8 @@
                 <ul class="nav navbar-nav">
                   <li><a href="/normalgallery" style="color:red;">Normale Gallerij</a></li>
                   <li><a href="{{ url('/image-gallery') }}" style="color:red;">Admin Gallerij</a></li>
-                  <li><a href="{{ url('/login') }}" style="color:red;">Login</a></li>
-                  <li><a href="{{ url('/register') }}" style="color:red;">Registreren</a></li>
+                  <li><a href="#loginmodal" data-toggle="modal" data-target="#loginmodal" style="color:red;">Login</a></li>
+                  <li><a href="#loginmodal" data-toggle="modal" data-target="#registermodal" style="color:red;">Register</a></li>
                   <li><a href="{{ url('/getInsert') }}" style="color:red;">Contact</a></li>
                 </ul>
               </nav>
@@ -128,9 +128,6 @@
         </div>
     </div>
 </div>
-
-@extends('layouts.footer')
-
 
 <style>
 
