@@ -163,7 +163,7 @@
 
 
                   <div class="modal-footer">
-                    
+
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
 
@@ -181,7 +181,7 @@
     $(this).find('.modal-dialog').css({width:'auto',
                                height:'auto',
                               'max-height':'100%'});
-});
+                            });
 
                   </script>
 
