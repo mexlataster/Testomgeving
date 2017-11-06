@@ -35,6 +35,10 @@ Route::get('/contact', function() {
 });
 
 //User update view
+
+Route::Get('/videogallery', function() {
+  return view('/videogallery');
+});
 Route::get('/userChange', 'userChangeController@index');
 
 //Same page with added ID
