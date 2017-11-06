@@ -12,12 +12,7 @@
 <?php if($url): ?>
 <form action="<?php echo e(route('user.update', $user->id)); ?>" method="POST">
 	Naam:<br>
-	<input type="text" name="name" value="<?php echo e($user->name); ?>"><br>
-	Achternaam: <br>
-	<input type="text" name="lastname" value="<?php echo e($user->lastname); ?>"><br>
-	Adres: <br>
-	<input type="text" name="adres" value="<?php echo e($user->adres); ?>"><br>
-
+	<input type="text" name="name" value="<?php echo e($user->name); ?>">
 	 <?php echo e(csrf_field()); ?>
 
   	<?php echo e(method_field('PUT')); ?>﻿
