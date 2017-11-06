@@ -45,11 +45,11 @@
           <input type="checkbox" name="remember" <?php echo e(old('remember') ? 'checked' : ''); ?>> Remember Me
       </label>
   </div>
-  <div>
-      <button type="submit" class="submit-button">
-          Login
-      </button>
+  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
+
+      <button type="submit" class="btn btn-primary" data-dismiss="modal">Login</button>
+<div>
 </form>
 </div>
 </div>
@@ -162,12 +162,13 @@
                   <?php echo e(Form::hidden('user_type', 'normal')); ?>
 
 
-                    <div class="modal-footer">
+                  <div class="modal-footer">
+                    
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
-                      <button type="submit" class="submit-button">
-                          Registreer
-                      </button>
-                  </div>
+
+                        <button type="submit" class="btn btn-primary" data-dismiss="modal">Registreer</button>
+                  <div>
                 </div>
               </div>
             </div>
