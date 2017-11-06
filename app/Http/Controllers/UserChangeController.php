@@ -37,7 +37,9 @@ class UserChangeController extends Controller
 
         //validate post data
         $this->validate($request, [
-            'name' => 'required'
+            'name' => 'required',
+            'lastname' => 'required',
+            'adres' => 'required'
         ]);
         
         //get post data
@@ -45,8 +47,9 @@ class UserChangeController extends Controller
         
         //update post data
         User::find($id)->update($postData);
-        
 
+        return redirect('/userChange');
+        
 
     }
 }
