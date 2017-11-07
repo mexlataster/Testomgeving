@@ -471,6 +471,11 @@ background-image: linear-gradient(
 	text-align: center;
 }
 
+.red-delete{
+  color: red;
+  font-family: bold; 
+}
+
 
 
 

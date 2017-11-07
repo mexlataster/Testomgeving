@@ -5,7 +5,7 @@
 	<div class="container">
 @if(!$url)
 				@foreach ($users as $user)
-					<a href="{{ url('userChange',$user->id) }}">{{$user->name}}</a> <br>
+					<a href="{{ url('userChange',$user->id) }}">{{$user->name}}</a> <a class="" href="{{ route('user.delete', $user->id) }}"><span class="red-delete">X</span></a><br>
 				@endforeach
 @endif
 

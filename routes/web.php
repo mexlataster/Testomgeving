@@ -47,6 +47,8 @@ Route::get('/userChange/{id}', 'userChangeController@edit');
 //Update user
 Route::any('/userChange/edit/{id}', 'userChangeController@update')->name('user.update');
 
+Route::any('/userChange/delete/{id}', 'userChangeController@delete')->name('user.delete');
+
 Route::get('/inschrijven', function () {
   return view('/inschrijven');
 });

@@ -20,6 +20,7 @@ class UserChangeController extends Controller
         $url = $request->is('userChange/*');
 
 
+
         return view('userChange', ['users' => $users], ['url' => $url]);
     }
 
@@ -51,5 +52,13 @@ class UserChangeController extends Controller
         return redirect('/userChange');
         
 
+    }
+
+    public function delete($id)
+    {
+
+     	User::find($id)->delete($id);
+
+    	return redirect('/userChange');
     }
 }

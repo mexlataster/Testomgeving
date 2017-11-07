@@ -12,8 +12,8 @@
           <a href="<?php echo e(url('/getInsert')); ?>">Contact</a>
       </div>
     </div>
-    <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
 
+    <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
     <div class="container" id="login-container">
         <h1 style="text-align: center;">Registreren</h1><br>
             <form class="center-form" role="form" method="POST" action="<?php echo e(route('register')); ?>">

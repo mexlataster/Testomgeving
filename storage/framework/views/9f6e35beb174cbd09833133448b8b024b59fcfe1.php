@@ -4,7 +4,7 @@
 	<div class="container">
 <?php if(!$url): ?>
 				<?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-					<a href="<?php echo e(url('userChange',$user->id)); ?>"><?php echo e($user->name); ?></a> <br>
+					<a href="<?php echo e(url('userChange',$user->id)); ?>"><?php echo e($user->name); ?></a> <a class="" href="<?php echo e(route('user.delete', $user->id)); ?>"><span class="red-delete">X</span></a><br>
 				<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 <?php endif; ?>
 
