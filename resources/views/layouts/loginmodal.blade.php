@@ -45,9 +45,9 @@
       </label>
   </div>
   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-
-
-      <button type="submit" class="btn btn-primary" data-dismiss="modal">Login</button>
+  <button type="submit" class="submit-button">
+      Login
+  </button>
 <div>
 </form>
 </div>
@@ -160,11 +160,13 @@
                   {{ Form::hidden('user_type', 'normal') }}
 
                   <div class="modal-footer">
-                    
+
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
-
-                        <button type="submit" class="btn btn-primary" data-dismiss="modal">Registreer</button>
+                    <button type="submit" class="submit-button">
+                        Registreer
+                    </button>
+                  </form>
                   <div>
                 </div>
               </div>
@@ -178,7 +180,7 @@
     $(this).find('.modal-dialog').css({width:'auto',
                                height:'auto',
                               'max-height':'100%'});
-});
+                            });
 
                   </script>
 
