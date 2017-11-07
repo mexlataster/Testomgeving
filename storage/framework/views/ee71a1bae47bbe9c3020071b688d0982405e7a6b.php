@@ -1,18 +1,5 @@
 <?php $__env->startSection('content'); ?>
-    <link rel="stylesheet" href="<?php echo e(asset('css/style.css')); ?>" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>
-<div class="layer">
-            <div class="menu">
-                  <a href="../"><img src="/images/head.png" class="head"></a>
-              <div class="links">
-                  <a href="<?php echo e(url('/normalgallery')); ?>">Normale Gallerij</a>
-                  <a href="<?php echo e(url('/image-gallery')); ?>">Admin Gallerij</a>
-                  <a href="<?php echo e(url('/login')); ?>">Login</a>
-                  <a href="<?php echo e(url('/register')); ?>">Registreren</a>
-                  <a href="<?php echo e(url('/getInsert')); ?>">Contact</a>
-              </div>
-            </div>
-    <div class="container" id="login-container">
+    
         <h1 style="text-align: center;">Login</h1><br>
             <form class="center-form" role="form" method="POST" action="<?php echo e(route('login')); ?>">
               <?php echo e(csrf_field()); ?>
