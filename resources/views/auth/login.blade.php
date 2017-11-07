@@ -1,20 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <link rel="stylesheet" href="{{asset('css/style.css')}}" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>
-<div class="layer">
-            <div class="menu">
-                  <a href="../"><img src="/images/head.png" class="head"></a>
-              <div class="links">
-                  <a href="{{ url('/normalgallery') }}">Normale Gallerij</a>
-                  <a href="{{ url('/image-gallery') }}">Admin Gallerij</a>
-                  <a href="{{ url('/login') }}">Login</a>
-                  <a href="{{ url('/register') }}">Registreren</a>
-                  <a href="{{ url('/getInsert') }}">Contact</a>
-              </div>
-            </div>
-    <div class="container" id="login-container">
+    
         <h1 style="text-align: center;">Login</h1><br>
             <form class="center-form" role="form" method="POST" action="{{ route('login') }}">
               {{ csrf_field() }}
