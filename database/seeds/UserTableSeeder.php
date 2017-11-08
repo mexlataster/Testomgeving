@@ -14,10 +14,6 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-        $role_user = Role::where('name', 'User')->first();
-        $role_author = Role::where('name', 'Author')->first();
-        $role_admin = Role::where('name', 'Admin')->first();
-
         $admin = new User();
         $admin->name = 'Dilivio';
         $admin->lastname = 'Cat';
@@ -27,8 +23,8 @@ class UserTableSeeder extends Seeder
         $admin->adres = 'Pearlbuck-erf 90';
         $admin->graduatie = 'Oranje';
         $admin->graduatie_behaald = '2003';
+        $admin->role_id = 1;
         $admin->save();
-        $admin->roles()->attach($role_admin);
 
         $user = new User();
         $user->name = 'Mex';
@@ -39,8 +35,8 @@ class UserTableSeeder extends Seeder
         $user->adres = 'Mex-erf 90';
         $user->graduatie = 'Blauw';
         $user->graduatie_behaald = '2018';
+        $user->role_id = 2;
         $user->save();
-        $user->roles()->attach($role_user);
 
         $author = new User();
         $author->name = 'Mark';
@@ -51,7 +47,7 @@ class UserTableSeeder extends Seeder
         $author->adres = 'Aletta jacobs erf 90';
 		$author->graduatie = 'Groen';
         $author->graduatie_behaald = '2017';
+        $author->role_id = 3;
         $author->save();
-        $author->roles()->attach($role_author);
     }
 }

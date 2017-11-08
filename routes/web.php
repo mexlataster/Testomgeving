@@ -39,10 +39,13 @@ Route::get('/contact', function() {
 Route::Get('/videogallery', function() {
   return view('/videogallery');
 });
+
 Route::get('/userChange', 'userChangeController@index');
 
 //Same page with added ID
 Route::get('/userChange/{id}', 'userChangeController@edit');
+
+Route::get('/roletest', 'CheckRoleController@index');
 
 //Update user
 Route::any('/userChange/edit/{id}', 'userChangeController@update')->name('user.update');

@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('graduatie');
             $table->string('graduatie_behaald');
             $table->string('foto-id');
+            $table->integer('role_id');
             $table->rememberToken();
             $table->timestamps();
         });
