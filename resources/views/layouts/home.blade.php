@@ -42,6 +42,7 @@
         <li>
           <a class="js-scroll-trigger" href="{{ url('/image-gallery') }}">Admin Galerij</a>
         </li>
+        {{-- Beginnen met nakijken of de user is ingelogd --}}
         @if(!Auth::check())
         <li>
           <a class="js-scroll-trigger" href="{{ url('/login') }}">Login</a>
@@ -50,13 +51,17 @@
           <a class="js-scroll-trigger" href="{{ url('/register') }}">Registreren</a>
         </li>
         @else
+        {{-- Check of de user admin is --}}
+        @if(Auth::user()->role_id > 2)
+        <li>
+        <a class="js-scroll-trigger" href="{{ url('/') }}}">Admin</a>
+        </li>
+        @endif
         <li>
           <a class="js-scroll-trigger" href="{{ url('/logout') }}">Uitloggen</a>
         </li>
         @endif
-        <li>
-          <a class="js-scroll-trigger" href="{{ url('/') }}}">Admin</a>
-        </li>
+
 
         <li>
           <a class="js-scroll-trigger" href="{{ url('/getInsert') }}">Contact</a>
