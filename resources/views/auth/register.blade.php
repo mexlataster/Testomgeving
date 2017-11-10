@@ -103,7 +103,7 @@
                             </div>
                         </div>
 
-                        {{ Form::hidden('role_id', 1) }}
+                        <input name="role_id" type="hidden" value="1">
                         <br>
 
 
