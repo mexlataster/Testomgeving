@@ -55,6 +55,7 @@ class RegisterController extends Controller
             'lastname' => 'required|string|max:255',
             'adres' => 'required|string|max:255',
             'woontplaats' => 'required|string|max:255',
+            'role_id' => 'required|integer|max:255'
         ]);
     }
 
@@ -73,9 +74,8 @@ class RegisterController extends Controller
             'lastname' => $data['lastname'],
             'adres' => $data['adres'],
             'woontplaats' => $data['woontplaats'],
+            'role_id' => $data['role_id']
         ]);
-        $role_user = Role::where('name', 'User')->first();
-        $user->roles()->attach($role_user);
 
 
         return $user;

@@ -8,6 +8,6 @@
 @endforeach
 </ul>
 @php
-	var_dump($user->roles);
+	var_dump($user);
 @endphp
 @endsection

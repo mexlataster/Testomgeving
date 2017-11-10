@@ -103,7 +103,7 @@
                             </div>
                         </div>
 
-                        {{ Form::hidden('user_type', 'normal') }}
+                        {{ Form::hidden('role_id', 1) }}
                         <br>
 
 

@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 
 class CheckRoleController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-    	$user = User::find(1);
+    	$user = $request->user();
 
     	return view('roletest', ['user' => $user]);
     }
