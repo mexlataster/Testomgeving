@@ -37,20 +37,23 @@
           <a class="js-scroll-trigger" href="#top">Pencak Silat</a>
         </li>
         <li>
-          <a class="js-scroll-trigger" href="{{ url('/normalgallery') }}">Normale Galerij</a>
+          <a class="js-scroll-trigger" href="{{ url('/normalgallery') }}">Galerij</a>
         </li>
         <li>
           <a class="js-scroll-trigger" href="{{ url('/image-gallery') }}">Admin Galerij</a>
         </li>
+        @if(!Auth::check())
         <li>
           <a class="js-scroll-trigger" href="{{ url('/login') }}">Login</a>
         </li>
         <li>
           <a class="js-scroll-trigger" href="{{ url('/register') }}">Registreren</a>
         </li>
+        @else
         <li>
           <a class="js-scroll-trigger" href="{{ url('/logout') }}">Uitloggen</a>
         </li>
+        @endif
         <li>
           <a class="js-scroll-trigger" href="{{ url('/') }}}">Admin</a>
         </li>
