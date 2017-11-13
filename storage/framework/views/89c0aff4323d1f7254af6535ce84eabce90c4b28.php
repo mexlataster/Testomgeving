@@ -13,25 +13,17 @@
     <title>Fotogalerij</title>
   </head>
   <body>
-      <div class="layer">
-            <div class="menu">
-                  <a href="../"><img src="/images/head.png" class="head"></a>
-              <div class="links">
-                  <a href="<?php echo e(url('/normalgallery')); ?>">Normale Gallerij</a>
-                  <a href="<?php echo e(url('/image-gallery')); ?>">Admin Gallerij</a>
-                  <a href="<?php echo e(url('/login')); ?>">Login</a>
-                  <a href="<?php echo e(url('/register')); ?>">Registreren</a>
-                  <a href="<?php echo e(url('/getInsert')); ?>">Contact</a>
-              </div>
-            </div>
-            <div class="imagecontainer">
-                <div class="title">
-                    <h4>Normal Gallery</h4>
+
+
+      <div class="layer1">
+            <div class="imagecontainer1">
+                <div class="title1">
+                    <h4>Image Gallery</h4>
                 </div><hr>
                 <br><br>
                 <?php if($images->count()): ?>
 
-                    <div class="images">
+                    <div class="images1">
                       <?php $__currentLoopData = $images; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $image): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <a class="thumbnail fancybox" rel="ligthbox" href="/images/<?php echo e($image->image); ?>">
                           <img class="img-responsive" alt="" src="/images/<?php echo e($image->image); ?>" />

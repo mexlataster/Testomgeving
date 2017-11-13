@@ -1,0 +1,452 @@
+@media only screen and (max-device-width: 450px) {
+	.main{
+		margin-bottom:300px !important;
+	}
+
+	.text{
+		width:unset !important;
+	}
+
+	img.head{
+		width:300px !important;
+		margin-top:-10px;
+	}
+
+	.menu{
+		width:100% !important;
+	}
+
+	.links{
+		margin-left:unset !important;
+		position:unset !important;
+		margin-top: unset !important;
+		text-align: center;
+	}
+
+	.links > a{
+		margin-right: unset !important;
+	}
+
+	.info{
+		width:80% !important;
+   		padding-bottom: 75px !important;
+   		height:unset !important;
+   		text-align: center !important;
+	}
+
+	.footer-left{
+		margin-left:25px !important;
+	}
+
+	.footer-right{
+		display: inline-grid !important;
+		text-align: unset !important;
+		margin-left: 25px !important;
+	}
+
+	.footer{
+		height: 80% !important;
+	}
+
+
+    #nav
+    {
+        position: relative;
+				text-align: center;
+
+    }
+        #nav > a
+        {
+        }
+        #nav:not( :target ) > a:first-of-type,
+        #nav:target > a:last-of-type
+        {
+            display: block;
+        }
+
+    /* first level */
+
+    #nav > ul
+    {
+        height: auto;
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+
+    }
+        #nav:target > ul
+        {
+            display: block;
+        }
+        #nav > ul > li
+        {
+            width: 100%;
+            float: none;
+        }
+
+    /* second level */
+
+    #nav li ul
+    {
+        position: static;
+    }
+}
+
+
+
+/*test*/
+#nav
+{
+    /* container */
+}
+    #nav > a
+    {
+        display: none;
+    }
+    #nav li
+    {
+        position: relative;
+    }
+
+    /* first level */
+
+    #nav > ul
+    {
+        height: 3.75em;
+    }
+        #nav > ul > li
+        {
+            width: 25%;
+            height: 100%;
+            float: left;
+        }
+
+    /* second level */
+
+    #nav li ul
+    {
+        display: none;
+        position: absolute;
+        top: 100%;
+    }
+        #nav li:hover ul
+        {
+            display: block;
+        }
+
+
+
+*{
+	font-family: sans-serif;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+	color:white;
+	font-weight: lighter;
+}
+
+body{
+  background-image: url("/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+	background-attachment: fixed;
+  z-index:-100;
+}
+
+input, textarea{
+	text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3);
+		color:black;
+}
+
+/*Home Page CSS*/
+
+.links{
+  display:inline;
+  margin-left: 125px;;
+  position: absolute;
+  margin-top: 25px;
+
+}
+
+.links>a{
+	margin-right:125px;
+	font-size:20px !important;
+	padding:5px;
+	font-weight: lighter;
+	font-family: 'Molengo', Georgia, Times, serif !important;
+}
+
+.links>a:hover{
+	margin-right:125px;
+	font-size:20px;
+	background-color:rgba(255,0,0, 0.5);
+	padding:5px;
+	border-radius: 15px;
+
+}
+
+.text>h3{
+	text-align: center;
+	font-weight: lighter;
+	margin-top:10px;
+}
+
+.button-info{
+	width:275px;
+	height:50px;
+	background-color:rgba(255, 0, 0, 0.6);
+	border: 1px solid black;
+	color:white;
+	border-radius: 7px;
+	border: 1px solid red;
+}
+
+.button-info:hover{
+	width:275px;
+	height:50px;
+	background-color:rgba(255, 0, 0, 0.9);
+	border: 1px solid black;
+	color:white;
+	border-radius: 7px;
+	border: 0px;
+}
+
+hr{
+	border: 1px solid red;
+	border-radius: 7px;
+	width:150px;
+	margin-top:-40px;
+}
+
+a{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+img.head{
+	padding:2px;
+  border-radius:10px;
+  margin-left:15px;
+	width:200px;
+}
+
+.layer1 {
+background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.5) 10%,
+    rgba(0, 0, 0, 0.2) 90%,
+    rgba(0, 0, 0, 0.05) 100%
+);
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height:100%;
+}
+
+.text>button{
+	margin-top:25px;
+	font-size: 15px;
+}
+
+.menu{
+  margin-top:20px;
+  height:75px;
+  border-radius: 15px;
+  margin-left:auto;
+  margin-right:auto;
+  width:1300px;
+
+}
+
+.main{
+  margin-top:275px;
+  margin-bottom:700px;
+}
+
+.manyang-main{
+	width:200px;
+}
+
+.text{
+  border-radius: 15px;
+  width:1025px;
+  margin-left:auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.title1{
+	text-align: center;
+	font-family: bold;
+	font-size: 48px;
+}
+
+.info{
+background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0.8) 85%,
+    rgba(255, 255, 255, 0.2) 95%,
+    rgba(255, 255, 255, 0.005) 100%);
+);
+	width:1170px;
+	padding:25px;
+	height:2000px;
+	color:black;
+	margin:0px;
+	margin-left:auto;
+	margin-right:auto;
+	top:0px;
+	border-radius: 7px;
+	margin-top:-200px;
+	margin-bottom:75px;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.0);
+}
+
+.red{
+	color: red;
+}
+
+.footer{
+	width:100%;
+	height:308px;
+	background-color: #2b2d36;
+	border-radius: 7px;
+}
+
+.footer-left{
+	padding-top:30px;
+	margin-left:125px;
+	width:300px;
+}
+
+.footer-right{
+  width: 300px;
+  margin-left: 60%;
+  margin-top: -265px;
+  text-align: center;
+}
+
+.footer-right>a:hover{
+	text-decoration: red solid underline;
+}
+
+/*End of Home Page CSS*/
+/*Normal Gallery CSS*/
+
+.imagecontainer1{
+  background-color: rgba(255,255,255,0.3);
+  border-radius: 25px;
+  position: absolute;
+  width:50%;
+  height: 70%;
+  z-index: 15;
+  top: 20%;
+  left: 25%;
+	border: 2px solid rgba(255, 255, 255, 0.1);
+  padding:25px;
+  text-align: left;
+}
+
+.img-responsive{
+	margin: 17px;
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+}
+
+.images1{
+	max-width: 850px;
+	display: initial;
+}
+
+/*End of Normal gallery CSS*/
+
+
+/*Contact Page CSS*/
+.container{
+  padding: 32px;
+  background-color: rgba(255,255,255,0.3);
+  position: absolute;
+  width: 900px;
+  height: 650px;
+  z-index: 15;
+  top: 20%;
+  left: 25%;
+	border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-input{
+	margin-left: 33%;
+  width: 650px;
+
+}
+
+.contact-info{
+	float:left;
+	width:30%;
+	margin-top:100px;
+}
+
+#mapid{
+		border-radius: 8px;
+	margin-top:15px;
+}
+
+.submit-button{
+	width:125px;
+	height:30px;
+	background-color:rgba(255, 0, 0, 0.6);
+	color:white;
+	border-radius: 7px;
+	border: 1px solid red;
+	cursor: pointer;
+}
+
+.submit-button:hover{
+	width:125px;
+	height:30px;
+	background-color:rgba(255, 0, 0, 0.7);
+	color:white;
+	border-radius: 7px;
+	border: 1px solid red;
+	cursor: pointer;
+}
+
+#map{
+	top: 3%;
+	width: 400px;
+	height: 350px;
+	margin:0px auto;
+	border-radius: 15px;
+}
+
+.text-message{
+	height:50px;
+	width:100px;
+	color:black;
+}
+
+/*End of Contact Page CSS*/
+/*Login Page CSS*/
+
+#login-container{
+	background-color: rgba(255,255,255,0.0) !important;
+
+}
+
+.center-form{
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+/*End of Login Page CSS*/

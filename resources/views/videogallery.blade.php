@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="{{asset('css/app.css')}}" type="text/css">
+<link rel="stylesheet" href="{{asset('css/bootstrap.css')}}" type="text/css">
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

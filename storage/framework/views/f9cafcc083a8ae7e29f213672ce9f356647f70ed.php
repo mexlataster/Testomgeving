@@ -1,114 +1,146 @@
 
 <!DOCTYPE html>
-<html lang="<?php echo e(app()->getLocale()); ?>">
-<head>
-    <link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="<?php echo e(asset('css/style.css')); ?>" type="text/css">
+<html lang="en">
+
+  <head>
+
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
+    <title>Stylish Portfolio - Start Bootstrap Template</title>
 
-     <title>App Name - <?php echo $__env->yieldContent('title'); ?></title>
+    <!-- Bootstrap Core CSS -->
+    <link href="<?php echo e(asset('css/bootstrap.min.css')); ?>" rel="stylesheet">
 
-    <!-- Styles -->
-</head>
+    <!-- Custom Fonts -->
+    <link href="<?php echo e(asset('css/font-awesome/css/font-awesome.min.css')); ?>" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
-<body>
+    <!-- Custom CSS -->
+    <link href="<?php echo e(asset('css/stylish-portfolio.css')); ?>" rel="stylesheet">
 
-<! layer div, voor de fayed out>
-<div class="layer">
+    <link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"
+   integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg=="
+   crossorigin=""></script>
 
+  </head>
 
+  <body>
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle">
+          <i class="fa fa-times"></i>
+        </a>
+        <li class="sidebar-brand">
+          <a class="js-scroll-trigger" href="#top">Pencak Silat</a>
+        </li>
+        <li>
+          <a class="js-scroll-trigger" href="<?php echo e(url('/normalgallery')); ?>">Foto Galerij</a>
+        </li>
+        <li>
+          <a class="js-scroll-trigger" href="<?php echo e(url('/videogallery')); ?>">Video Galerij</a>
+        </li>
+        
+        <?php if(!Auth::check()): ?>
+        <li>
+          <a class="js-scroll-trigger" href="<?php echo e(url('/login')); ?>">Login</a>
+        </li>
+        <li>
+          <a class="js-scroll-trigger" href="<?php echo e(url('/register')); ?>">Registreren</a>
+        </li>
+        <?php else: ?>
+        
+        <?php if(Auth::user()->role_id > 2): ?>
+        <li>
+        <a class="js-scroll-trigger" href="<?php echo e(url('/')); ?>}">Admin</a>
+        </li>
+        <?php endif; ?>
+        <li>
+          <a class="js-scroll-trigger" href="<?php echo e(url('/logout')); ?>">Uitloggen</a>
+        </li>
+        <?php endif; ?>
 
-    <! menu div >
-      <div class="menu">
-                  <a href="../"><img src="/images/head.png" class="head"></a>
-                  <nav id="nav" role="navigation">
-                    <a href="#nav" title="Show navigation">Menu</a>
-                <a href="#" title="Hide navigation">Menu</a>
-                    <ul style="padding:unset !important;">
-                            <ul class="links" style="list-style: none !important;">
-                              <li><a href="<?php echo e(url('/normalgallery')); ?>">Normale Gallerij</a></li>
-                              <li><a href="<?php echo e(url('/image-gallery')); ?>">Admin Gallerij</a></li>
-                              <! Kijk of de user is ingelogd.>
-                              <?php if(!Auth::check()): ?>
-                              <li><a href="<?php echo e(url('/login')); ?>">Login</a></li>
-                              <li><a href="<?php echo e(url('/register')); ?>">Registreren</a></li>
-                              <?php else: ?>
-                              <li><a href="<?php echo e(url('/logout')); ?>">Uitloggen</a></li>
-                              <?php endif; ?>
-                              <li><a href="<?php echo e(url('/contact')); ?>">Contact</a></li>
-                              <! Check of er een user is ingelogd, en daarna checken of de user admin is>
-                              <?php if(isset(Auth::user()->user_type)): ?>
-                              <?php if(Auth::user()->user_type == 'normal'): ?>
-                              <li><a href="<?php echo e(url('/')); ?>">Admin</a></li>
-                              <?php endif; ?>
-                              <?php endif; ?>
-                            </ul>
-                        </li>
-                    </ul>
-                  </nav>
-
-              </div>
-
-    <! app div >
-    <div id="app">
-                <div class="navbar-header">
-
-                    <!-- Collapsed Hamburger -->
-                    <!--
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        </button>
-                     -->
-
-                    <!-- Branding Image -->
-                    <!--
-                        <a class="navbar-brand" href="<?php echo e(url('/')); ?>">
-                        <?php echo e(config('app.name', 'Laravel')); ?>
-
-                        </a>
-                    -->
-                </div>
-
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-        </div>
-        </nav>
-        </div>
+         <li>
+          <a class="js-scroll-trigger" href="<?php echo e(url('/getInsert')); ?>">Contact</a>
+        </li>
+      </ul>
+    </nav>
 
 
-    <! page content >
-    <?php echo $__env->yieldContent('content'); ?>
+    <!-- Header -->
+    <header class="header" id="top">
+    <a href=""><img class="logo" src="images/head.png"></a>
+            <div class="content-box">
+              <?php echo $__env->yieldContent('content'); ?>
+            </div>
+    </header>
 
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 mx-auto text-center">
+            <h4>
+              <strong>Adres</strong>
+            </h4>
+            <p>(Gymzaal Bavinkschool)
+              <br>Kolfstraat tegenover parkeergarage Drie Vriendenhof<br>
+            </p>
 
-    <! footer >
-     <div class="footer">
-              <div class="footer-left">
-                  <h1>Contact</h1>
-                  <h3 class="red">Lestijden:</h3>
-                  <p>Iedere woensdag van 19:00 tot 20:30</p>
+            <p><b>Lestijden:</b>
+              <br>Iedere woensdag van 19:00 tot 20:30<br>
+            </p>
 
-                  <h3 class="red">Adres:</h3>
-                  <p>(Gymzaal Bavinkschool)<br>
-                  Kolfstraat tegenover<br> parkeergarage Drie Vriendenhof</p><br>
-              </div>
-
-              <div class="footer-right">
-                  <h2>Links</h2>
-                  <h3 class="red">NPSF</h3>
-                  <a href="http://www.npsf.nl/" target="_blank">www.npsf.nl</a><br><br>
-
-                  <h3 class="red">Manyang</h3>
-                  <a href="https://www.manyang.nl/" target="_blank">www.manyang.nl</a>
-              </div>
+            <ul class="list-unstyled">
+              <li>
+                <i class="fa fa-phone fa-fw"></i>
+                (+31) 6 52 37 11 70</li>
+              <li>
+                <i class="fa fa-envelope-o fa-fw"></i>
+                <a href="mailto:manyangdordrecht@gmail.com">manyangdordrecht@gmail.com</a>
+              </li>
+            </ul>
+            <br>
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="https://www.facebook.com/Pencak.Silat.Manyang/">
+                  <i class="fa fa-facebook fa-fw fa-3x"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="http://npsf.nl/">
+                  <i class="fa fa-dribbble fa-fw fa-3x"></i>
+                </a>
+              </li>
+            </ul>
+            <hr class="small">
+            <p class="text-muted">Copyright &copy; Rolf Lataster 2017</p>
           </div>
-          </div>
-    </body>
+        </div>
+      </div>
+      <a id="to-top" href="#top" class="btn btn-dark btn-lg js-scroll-trigger">
+        <i class="fa fa-chevron-up fa-fw fa-1x"></i>
+      </a>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="<?php echo e(asset('js/jquery.js')); ?>"></script>
+    <script src="<?php echo e(asset('js/bootstrap.bundle.min.js')); ?>"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="<?php echo e(asset('js/stylish-portfolio.js')); ?>"></script>
+
+  </body>
+
 </html>

@@ -30,8 +30,8 @@ Route::get('/messagecenter', function() {
     return view('/messagecenter');
 });
 
-Route::get('/contact', function() {
-  return view('/contact');
+Route::get('/getInsert', function() {
+  return view('/getInsert');
 });
 
 //User update view

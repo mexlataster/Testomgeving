@@ -21,6 +21,12 @@
     <!-- Custom CSS -->
     <link href="{{ asset('css/stylish-portfolio.css') }}" rel="stylesheet">
 
+    <link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"
+   integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg=="
+   crossorigin=""></script>
+
   </head>
 
   <body>
@@ -37,10 +43,10 @@
           <a class="js-scroll-trigger" href="#top">Pencak Silat</a>
         </li>
         <li>
-          <a class="js-scroll-trigger" href="{{ url('/normalgallery') }}">Normale Galerij</a>
+          <a class="js-scroll-trigger" href="{{ url('/normalgallery') }}">Foto Galerij</a>
         </li>
         <li>
-          <a class="js-scroll-trigger" href="{{ url('/image-gallery') }}">Admin Galerij</a>
+          <a class="js-scroll-trigger" href="{{ url('/videogallery') }}">Video Galerij</a>
         </li>
         {{-- Beginnen met nakijken of de user is ingelogd --}}
         @if(!Auth::check())
@@ -96,10 +102,10 @@
             <ul class="list-unstyled">
               <li>
                 <i class="fa fa-phone fa-fw"></i>
-                (123) 456-7890</li>
+                (+31) 6 52 37 11 70</li>
               <li>
                 <i class="fa fa-envelope-o fa-fw"></i>
-                <a href="mailto:name@example.com">name@example.com</a>
+                <a href="mailto:manyangdordrecht@gmail.com">manyangdordrecht@gmail.com</a>
               </li>
             </ul>
             <br>

@@ -20,7 +20,14 @@ body {
     font-family: sans-serif;
 }
 
+.text-vertical-center1 {
+    background: url(../images/frontfoto.jpg) no-repeat center center scroll;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
 .text-vertical-center {
+    
     display: table-cell;
     text-align: center;
     vertical-align: middle;
@@ -182,7 +189,7 @@ hr.small {
     border-radius: 7px;
 }
 
-#header-button{
+#downClick{
     background-color:rgba(255, 0, 0, 0.6);
     border-radius: 7px;
     border: 1px solid red;

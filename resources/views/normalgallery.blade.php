@@ -13,25 +13,17 @@
     <title>Fotogalerij</title>
   </head>
   <body>
-      <div class="layer">
-            <div class="menu">
-                  <a href="../"><img src="/images/head.png" class="head"></a>
-              <div class="links">
-                  <a href="{{ url('/normalgallery') }}">Normale Gallerij</a>
-                  <a href="{{ url('/image-gallery') }}">Admin Gallerij</a>
-                  <a href="{{ url('/login') }}">Login</a>
-                  <a href="{{ url('/register') }}">Registreren</a>
-                  <a href="{{ url('/getInsert') }}">Contact</a>
-              </div>
-            </div>
-            <div class="imagecontainer">
-                <div class="title">
-                    <h4>Normal Gallery</h4>
+
+
+      <div class="layer1">
+            <div class="imagecontainer1">
+                <div class="title1">
+                    <h4>Image Gallery</h4>
                 </div><hr>
                 <br><br>
                 @if($images->count())
 
-                    <div class="images">
+                    <div class="images1">
                       @foreach($images as $image)
                         <a class="thumbnail fancybox" rel="ligthbox" href="/images/{{ $image->image }}">
                           <img class="img-responsive" alt="" src="/images/{{ $image->image }}" />

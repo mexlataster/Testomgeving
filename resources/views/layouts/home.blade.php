@@ -37,10 +37,10 @@
           <a class="js-scroll-trigger" href="#top">Pencak Silat</a>
         </li>
         <li>
-          <a class="js-scroll-trigger" href="{{ url('/normalgallery') }}">Normale Galerij</a>
+          <a class="js-scroll-trigger" href="{{ url('/normalgallery') }}">Foto Galerij</a>
         </li>
         <li>
-          <a class="js-scroll-trigger" href="{{ url('/image-gallery') }}">Admin Galerij</a>
+          <a class="js-scroll-trigger" href="{{ url('/videogallery') }}">Video Galerij</a>
         </li>
         {{-- Beginnen met nakijken of de user is ingelogd --}}
         @if(!Auth::check())
@@ -50,6 +50,7 @@
         <li>
           <a class="js-scroll-trigger" href="{{ url('/register') }}">Registreren</a>
         </li>
+
         @else
         {{-- Check of de user admin is --}}
         @if(Auth::user()->role_id > 2)
@@ -75,7 +76,7 @@
         <h1>Pencak Silat</h1>
         <hr><br>
         <img src="/images/manyang.png" class="manyang-main"><br><br><br>
-        <a href="#about" id="header-button" class="btn btn-dark btn-lg js-scroll-trigger">KLIK HIER OM VERDER TE GAAN</a>
+        <a href="#about" id="downClick" class="btn btn-dark btn-lg js-scroll-trigger">KLIK HIER OM VERDER TE GAAN</a>
       </div>
     </header>
 
@@ -84,154 +85,35 @@
       <div class="container text-center">
         <h2>Pencak Silat</h2><br>
         <p class="lead">
-            Aangenomen wordt dat eeuwen geleden priesters en monniken technieken ontwikkelden om zichzelf te verdedigen.<br>
-            Hierbij bestudeerden zij het gedrag van dieren, met in het bijzonder de overlevingstechnieken.<br>
-            Ook nu nog geven wij aan sommige technieken dierenbenamingen, zoals: <br>Harimau of Macan (tijger), Ular (slang), Monjet of Keteh (aap) en Manyang (wesp).</p>
+          Pencak silat (Pentjak silat*) is dé verdedigingskunst van Indonesië. Sinds de oudheid bestaat de noodzaak om jezelf te leren verdedigen. Dit geldt natuurlijk ook voor de bewoners van het Indonesische eilandenrijk.
       </div>
       <!-- /.container -->
     </section>
 
-    <!-- Services -->
-    <section id="services" class="services bg-primary text-white">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col-lg-10 mx-auto">
-            <h2>Our Services</h2>
-            <hr class="small">
-            <div class="row">
-              <div class="col-md-3 col-sm-6">
-                <div class="service-item">
-                  <span class="fa-stack fa-4x">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-cloud fa-stack-1x text-primary"></i>
-                  </span>
-                  <h4>
-                    <strong>Service Name</strong>
-                  </h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  <a href="#" class="btn btn-light">Learn More</a>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6">
-                <div class="service-item">
-                  <span class="fa-stack fa-4x">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-compass fa-stack-1x text-primary"></i>
-                  </span>
-                  <h4>
-                    <strong>Service Name</strong>
-                  </h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  <a href="#" class="btn btn-light">Learn More</a>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6">
-                <div class="service-item">
-                  <span class="fa-stack fa-4x">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-flask fa-stack-1x text-primary"></i>
-                  </span>
-                  <h4>
-                    <strong>Service Name</strong>
-                  </h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  <a href="#" class="btn btn-light">Learn More</a>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6">
-                <div class="service-item">
-                  <span class="fa-stack fa-4x">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-shield fa-stack-1x text-primary"></i>
-                  </span>
-                  <h4>
-                    <strong>Service Name</strong>
-                  </h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  <a href="#" class="btn btn-light">Learn More</a>
-                </div>
-              </div>
-            </div>
-            <!-- /.row (nested) -->
-          </div>
-          <!-- /.col-lg-10 -->
-        </div>
-        <!-- /.row -->
-      </div>
-      <!-- /.container -->
-    </section>
 
-    <!-- Callout -->
-    <aside class="callout">
-      <div class="text-vertical-center">
-        <h1>Onze lessen</h1>
-      </div>
-    </aside>
-
-    <!-- Portfolio -->
-    <!-- gewoon even niet nu, oke
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-10 mx-auto text-center">
-            <h2>Our Work</h2>
-            <hr class="small">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="portfolio-item">
-                  <a href="#">
-                    <img class="img-portfolio img-fluid" src="images/infotos1.jpg">
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="portfolio-item">
-                  <a href="#">
-                    <img class="img-portfolio img-fluid" src="images/infotos2.jpg">
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="portfolio-item">
-                  <a href="#">
-                    <img class="img-portfolio img-fluid" src="images/infotos3.jpg">
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="portfolio-item">
-                  <a href="#">
-                    <img class="img-portfolio img-fluid" src="images/infotos4.jpg">
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!-- /.row (nested)
-            <a href="#" class="btn btn-dark">View More Items</a>
-          </div>
-          <!-- /.col-lg-10
-        </div>
-        <!-- /.row
-      </div>
-      <!-- /.container
-    </section>
 
     <!-- About -->
     <section id="about" style="background-color:#337ab7; color:white;" class="about">
       <div class="container text-center">
         <h2>Hoe worden onze lessen gegeven</h2><br>
         <p class="lead">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          We beginnen de les altijd met een ceremoniele opening, hierna komt de conditie/warming-up.
+          Dan houden we een korte drink pauze. <br>
+          Hierna splitsten we de les op in Tanding(wedstrijdvechten), Seni(stijl beoefenen) en Gerak Cepat(straat zelfverdediging).<br>
+          Aan het einde van de les doen we altijd nog een korte cooling down voor de spieren.
+
+        </p>
+            <a href="#" class="btn btn-light">Learn More</a>
       </div>
       <!-- /.container -->
     </section>
 
     <!-- Map -->
     <section id="contact" class="map">
-      <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+      <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJyaKbxjIpxEcRmZubSAZsrgA&key=AIzaSyBdi6DkATY7vZ39ZJsu4PMrBGddQFheNxw"></iframe>
       <br/>
       <small>
-        <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
+        <a href="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJyaKbxjIpxEcRmZubSAZsrgA&key=AIzaSyBdi6DkATY7vZ39ZJsu4PMrBGddQFheNxw"></a>
       </small>
     </section>
 
@@ -254,10 +136,10 @@
             <ul class="list-unstyled">
               <li>
                 <i class="fa fa-phone fa-fw"></i>
-                (123) 456-7890</li>
+                (+31) 6 52 37 11 70</li>
               <li>
                 <i class="fa fa-envelope-o fa-fw"></i>
-                <a href="mailto:name@example.com">name@example.com</a>
+                <a href="mailto:manyangdordecht@gmail.com">manyangdordrecht@gmail.com</a>
               </li>
             </ul>
             <br>
