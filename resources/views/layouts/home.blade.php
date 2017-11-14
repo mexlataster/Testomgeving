@@ -75,7 +75,7 @@
       <div class="text-vertical-center">
         <h1>Pencak Silat</h1>
         <hr><br>
-        <img src="/images/manyang.png" class="manyang-main"><br><br><br>
+        <img src="/public/images/manyang.png" class="manyang-main"><br><br><br>
         <a href="#about" id="downClick" class="btn btn-dark btn-lg js-scroll-trigger">KLIK HIER OM VERDER TE GAAN</a>
       </div>
     </header>
